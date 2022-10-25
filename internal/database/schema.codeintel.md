@@ -9,6 +9,8 @@ Indexes:
 
 ```
 
+Stores the last time processed LSIF data was reconciled with the other database.
+
 # Table "public.lsif_data_definitions"
 ```
      Column     |  Type   | Collation | Nullable | Default 

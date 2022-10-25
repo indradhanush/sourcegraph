@@ -80,7 +80,7 @@
   "Tables": [
     {
       "Name": "codeintel_last_reconcile",
-      "Comment": "",
+      "Comment": "Stores the last time processed LSIF data was reconciled with the other database.",
       "Columns": [
         {
           "Name": "dump_id",

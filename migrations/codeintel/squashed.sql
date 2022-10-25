@@ -128,6 +128,8 @@ CREATE TABLE codeintel_last_reconcile (
     last_reconcile_at timestamp with time zone NOT NULL
 );
 
+COMMENT ON TABLE codeintel_last_reconcile IS 'Stores the last time processed LSIF data was reconciled with the other database.';
+
 CREATE TABLE lsif_data_definitions (
     dump_id integer NOT NULL,
     scheme text NOT NULL,
