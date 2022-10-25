@@ -123,6 +123,11 @@ CREATE FUNCTION update_lsif_data_references_schema_versions_insert() RETURNS tri
     RETURN NULL;
 END $$;
 
+CREATE TABLE codeintel_last_reconcile (
+    dump_id integer NOT NULL,
+    last_reconcile_at timestamp with time zone NOT NULL
+);
+
 CREATE TABLE lsif_data_definitions (
     dump_id integer NOT NULL,
     scheme text NOT NULL,
@@ -411,6 +416,8 @@ ALTER TABLE ONLY rockskip_repos
 
 ALTER TABLE ONLY rockskip_symbols
     ADD CONSTRAINT rockskip_symbols_pkey PRIMARY KEY (id);
+
+CREATE INDEX codeintel_last_reconcile_last_reconcile_at_dump_id ON codeintel_last_reconcile USING btree (last_reconcile_at, dump_id);
 
 CREATE INDEX lsif_data_definitions_dump_id_schema_version ON lsif_data_definitions USING btree (dump_id, schema_version);
 

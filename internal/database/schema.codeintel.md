@@ -1,3 +1,14 @@
+# Table "public.codeintel_last_reconcile"
+```
+      Column       |           Type           | Collation | Nullable | Default 
+-------------------+--------------------------+-----------+----------+---------
+ dump_id           | integer                  |           | not null | 
+ last_reconcile_at | timestamp with time zone |           | not null | 
+Indexes:
+    "codeintel_last_reconcile_last_reconcile_at_dump_id" btree (last_reconcile_at, dump_id)
+
+```
+
 # Table "public.lsif_data_definitions"
 ```
      Column     |  Type   | Collation | Nullable | Default 
