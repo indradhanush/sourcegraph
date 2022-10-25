@@ -111,6 +111,16 @@
       ],
       "Indexes": [
         {
+          "Name": "codeintel_last_reconcile_dump_id_key",
+          "IsPrimaryKey": false,
+          "IsUnique": true,
+          "IsExclusion": false,
+          "IsDeferrable": false,
+          "IndexDefinition": "CREATE UNIQUE INDEX codeintel_last_reconcile_dump_id_key ON codeintel_last_reconcile USING btree (dump_id)",
+          "ConstraintType": "u",
+          "ConstraintDefinition": "UNIQUE (dump_id)"
+        },
+        {
           "Name": "codeintel_last_reconcile_last_reconcile_at_dump_id",
           "IsPrimaryKey": false,
           "IsUnique": false,

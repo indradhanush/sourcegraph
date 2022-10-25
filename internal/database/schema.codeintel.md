@@ -5,6 +5,7 @@
  dump_id           | integer                  |           | not null | 
  last_reconcile_at | timestamp with time zone |           | not null | 
 Indexes:
+    "codeintel_last_reconcile_dump_id_key" UNIQUE CONSTRAINT, btree (dump_id)
     "codeintel_last_reconcile_last_reconcile_at_dump_id" btree (last_reconcile_at, dump_id)
 
 ```

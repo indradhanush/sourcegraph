@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS codeintel_last_reconcile (
-    dump_id integer NOT NULL,
+    dump_id integer NOT NULL UNIQUE,
     last_reconcile_at timestamp with time zone NOT NULL
 );
 
