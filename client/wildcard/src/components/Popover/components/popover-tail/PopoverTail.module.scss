@@ -3,7 +3,6 @@
     top: 0;
     left: 0;
     z-index: 2;
-    overflow: hidden;
 
     --tail-width: 24px;
     --tail-background: var(--dropdown-bg);
@@ -13,7 +12,7 @@
     height: calc(var(--tail-width) / 2);
 
     &--size-sm {
-        --tail-width: 14px;
+        --tail-width: 16px;
     }
 
     &--size-lg {
